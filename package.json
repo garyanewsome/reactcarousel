@@ -1,7 +1,7 @@
 {
   "name": "reactcarousel",
   "version": "0.0.1",
-  "description": "",
+  "description": "demo from https://www.npmjs.com/package/react-infinite-carousel",
   "main": "index.js",
   "scripts": {
     "start": "webpack=dev webpack-dev-server --hot --inline --progress --colors"
@@ -17,7 +17,7 @@
     "jquery": "^2.2.2",
     "path": "^0.12.7",
     "react-hot-loader": "^1.3.0",
-    "webpack": "^1.12.14",
+    "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
@@ -26,5 +26,13 @@
     "object-assign": "^4.0.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garyanewsome/reactcarousel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/garyanewsome/reactcarousel/issues"
+  },
+  "homepage": "https://github.com/garyanewsome/reactcarousel#readme"
 }
