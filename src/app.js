@@ -1,18 +1,23 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
+import Carousel from './components/carousel.js'
 
-require('react-infinite-carousel')
+var headlines = ["Headline 1", "Headline 2", "Headline 3"]
+var index = 0
 
-var carousel = document.getElementById('carousel'),
-    backgroundRenderer = function(index){
-	    return <img src={"backgroundImage.png"} width: '100%', height: '100%'/>
-    },
-    itemRenderer = function(index, progress){
-    	return <div>{"Item number " + index} </div>
-    };
-    
-	React.render(<Carousel
-                backgroundRenderer={backgroundRenderer}
-                itemRenderer={itemRenderer}
-                itemsCount={10}
-            />, content);
+var carousel = function(){
+	var DOMcarousel = document.getElementById("carousel")
+	DOMcarousel.innerHTML = headlines[index++]
+	if(index >= headlines.length){
+		index = 0
+	}
+}
+
+var callCarousel = function(headlinesConfig){
+	headlines = headlinesConfig
+	var intervalID = window.setInterval(carousel, 1000)
+}
+
+window.callCarousel = callCarousel
+
+ReactDOM.render(<Carousel/>, document.getElementById("carousel"))
